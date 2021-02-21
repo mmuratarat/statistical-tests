@@ -1,10 +1,12 @@
 bookdown::gitbook:
+  default: true
   toc_depth: 4
   css: style.css
   split_by: chapter
   config:
     toc:
       collapse: section
+      scroll_highlight: yes
       before: |
         <li><a href="https://mmuratarat.github.io/">Mustafa Murat ARAT</a></li>
       after: |
@@ -30,7 +32,8 @@ bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
+  keep_tex: yes
   citation_package: natbib
 bookdown::epub_book:
-  toc_depth: 5
+  toc_depth: 4
   stylesheet: style.css

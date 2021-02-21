@@ -2,11 +2,6 @@
 title: "İstatistiksel Testler"
 author: "Mustafa Murat ARAT"
 date: "2021-02-21"
-output:
-  pdf_document:
-    keep_tex: yes
-  html_document:
-    df_print: paged
 description: Everything you need (and nothing more) about statistical tests
 documentclass: book
 fontsize: 12pt
