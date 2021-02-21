@@ -1,0 +1,20 @@
+--- 
+title: "İstatistiksel Testler"
+author: "Mustafa Murat ARAT"
+date: '`r Sys.Date()`'
+output: pdf_document
+description: Everything you need (and nothing more) to start a bookdown book.
+documentclass: book
+fontsize: 12pt
+github-repo: seankross/bookdown-start
+linestretch: 1.5
+link-citations: yes
+bibliography: book.bib
+site: bookdown::bookdown_site
+biblio-style: apalike
+url: http\://seankross.com/bookdown-start/
+---
+
+# Preface {-}
+
+This is the very first part of the book.
