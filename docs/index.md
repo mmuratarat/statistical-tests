@@ -7,7 +7,7 @@ output:
     keep_tex: yes
   html_document:
     df_print: paged
-description: Everything you need (and nothing more) to start a bookdown book.
+description: Everything you need (and nothing more) about statistical tests
 documentclass: book
 fontsize: 12pt
 github-repo: mmuratarat/statistical-tests

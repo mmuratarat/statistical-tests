@@ -4,5 +4,5 @@ repo: https://github.com/mmuratarat/statistical-tests
 output_dir: docs
 rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd", "03-Work-In-Progress.Rmd"]
 clean: [packages.bib, bookdown.bbl]
-new_session: no
+new_session: yes
 delete_merged_files: true
