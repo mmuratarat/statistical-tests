@@ -1,7 +1,7 @@
 --- 
 title: "İstatistiksel Testler"
 author: "Mustafa Murat ARAT"
-date: '`r Sys.Date()`'
+date: '2021-02-21'
 output:
   pdf_document:
     keep_tex: true
