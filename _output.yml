@@ -24,10 +24,10 @@ bookdown::gitbook:
       position: fixed
       search: yes
     info: yes
-#bookdown::pdf_book:
-#  includes:
-#    in_header: preamble.tex
-#  latex_engine: xelatex
-#  citation_package: natbib
-#bookdown::epub_book:
-#  stylesheet: style.css
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+bookdown::epub_book:
+  stylesheet: style.css

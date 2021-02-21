@@ -125,14 +125,15 @@
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
+"github": true,
 "facebook": true,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin"],
+"google": false
 },
 "fontsettings": {
 "theme": "white",
@@ -151,10 +152,15 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["statistical_tests.pdf", "statistical_tests.epub"],
+"download": ["statistical_tests.pdf", "statistical_tests.epub", "statistical_tests.mobi"],
 "toc": {
 "collapse": "subsection"
-}
+},
+"toolbar": {
+"position": "fixed",
+"search": true
+},
+"info": true
 });
 });
 </script>

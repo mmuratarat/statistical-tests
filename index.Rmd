@@ -2,7 +2,9 @@
 title: "İstatistiksel Testler"
 author: "Mustafa Murat ARAT"
 date: '`r Sys.Date()`'
-output: pdf_document
+output:
+  pdf_document:
+    keep_tex: true
 description: Everything you need (and nothing more) to start a bookdown book.
 documentclass: book
 fontsize: 12pt
