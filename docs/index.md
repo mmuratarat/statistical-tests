@@ -1,10 +1,12 @@
 --- 
 title: "İstatistiksel Testler"
 author: "Mustafa Murat ARAT"
-date: '2021-02-21'
+date: "2021-02-21"
 output:
   pdf_document:
-    keep_tex: true
+    keep_tex: yes
+  html_document:
+    df_print: paged
 description: Everything you need (and nothing more) to start a bookdown book.
 documentclass: book
 fontsize: 12pt
