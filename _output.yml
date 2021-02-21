@@ -9,7 +9,20 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">RStudio'da bookdown ile yapılmıştır</a></li>
     edit: https://github.com/mmuratarat/statistical-tests/edit/master/%s
-    download: ["pdf", "epub"]
+    sharing:
+      facebook: yes
+      twitter: yes
+      github: yes
+      google: no
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: ['facebook', 'google', 'twitter', 'linkedin']
+    toolbar:
+      position: fixed
+      search: yes
+      download: ["pdf", "epub"]
 #bookdown::pdf_book:
 #  includes:
 #    in_header: preamble.tex
