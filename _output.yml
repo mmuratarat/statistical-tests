@@ -8,7 +8,7 @@ bookdown::gitbook:
         <li><a href="https://mmuratarat.github.io/">Mustafa Murat ARAT</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">RStudio'da bookdown ile yapılmıştır</a></li>
-    edit: https://github.com/jules32/bookdown-tutorial/edit/master/%s
+    edit: https://github.com/mmuratarat/statistical-tests/edit/master/%s
     download: ["pdf"]
 #bookdown::pdf_book:
 #  includes:
