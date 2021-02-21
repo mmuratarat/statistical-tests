@@ -20,4 +20,3 @@ url: https://mmuratarat.github.io/statistical-tests/
 # Preface {-}
 
 This is the very first part of the book.
-
