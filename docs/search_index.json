@@ -1,1 +1,1 @@
-[["introduction.html", "Chapter 2 Giriş", " Chapter 2 Giriş BLABLABLA "]]
+[["index.html", "İstatistiksel Testler Chapter 1 Önsöz", " İstatistiksel Testler Mustafa Murat ARAT 2021-02-22 Chapter 1 Önsöz This is the very first part of the book. bookdown::render_book(‘index.Rmd,’ ‘bookdown::pdf_book’) bookdown::render_book(‘index.Rmd,’ ‘bookdown::epub_book’) "]]
