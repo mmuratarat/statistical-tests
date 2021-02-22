@@ -197,6 +197,8 @@ Z = \frac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}}
 </div>
 <div id="örnek" class="section level3" number="3.1.4">
 <h3><span class="header-section-number">3.1.4</span> Örnek</h3>
+<p>Belirli bir kozmetik yelpazesi için, yüz pudrasının olduğu kutuları doldurmak için ortalama 4 gm ve standart sapma 1 gm olacak şekilde bir doldurma işlemi yapılmaktadır. Bir kalite kontrol müfettişi rastgele dokuz kutudan numune almaktadır ve her bir kutudaki tozu tartmaktadır. Ortalama toz ağırlığı 4,6 gramdır. Dolgu işlemi hakkında neler söylenebilir?</p>
+<p>Aşırı ve az doldurma konusunda endişeliysek iki yönlü bir test kullanılabilir. Öte yandan, sadece kozmetik malzemenin fazla doldurulmasıyla ilgileniyorsak tek yönlü bir test uygundur.</p>
 <p>Sayısal Hesaplama</p>
 <p><span class="math inline">\(\mu_{0} = 4.0\)</span>, <span class="math inline">\(n=9\)</span>, <span class="math inline">\(\overline{x} = 4.6\)</span>, <span class="math inline">\(\sigma = 1.0\)</span>, <span class="math inline">\(\alpha = 0.05\)</span> (<span class="math inline">\(\%95\)</span> güven düzeyine sahip)</p>
 <p><span class="math inline">\(Z = \dfrac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}} = \frac{4.6 - 4.0}{1.0 / \sqrt{9}} = \frac{0.6}{1/3} = 1.8\)</span></p>
@@ -221,7 +223,7 @@ Z = \frac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}}
 <span id="cb1-16"><a href="tests.html#cb1-16" aria-hidden="true" tabindex="-1"></a>           <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="fl">0.95</span>, <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">type =</span> <span class="st">&quot;closed&quot;</span>, <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.02</span>, <span class="st">&quot;npc&quot;</span>))) <span class="sc">+</span></span>
 <span id="cb1-17"><a href="tests.html#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="sc">-</span><span class="fl">2.66</span>, <span class="at">y=</span><span class="fl">0.048</span>, <span class="at">label=</span><span class="st">&#39;0.025&#39;</span>)</span></code></pre></div>
 <p><img src="03-Tests_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>Test istatistiği, taralı alan olan kabul bölgesine düstüğü için <span class="math inline">\(H_{0}\)</span> boş hipotezini red edemezsiniz.</p>
+<p>Test istatistiği, taralı alan olan kabul bölgesine düstüğü için <span class="math inline">\(H_{0}\)</span> boş hipotezini red edemezsiniz. Yani, bu numune (örneklem) için doldurma işleminin hedefte çalışmadığını öne sürmek için hiçbir neden yoktur.</p>
 <p>Eğer tek yönlü hipotez testi kurmak isteseydiniz, kuracağınız hipotezler aşağıdaki gibidir:</p>
 <p><span class="math inline">\(H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu &gt; \mu_{0}\)</span>.</p>
 <p>Bu durumda kabul bölgesi <span class="math inline">\(Z &lt; 1.65\)</span>’dır çünkü kritik değer <span class="math inline">\(Z_{\alpha} = Z_{0.05} = 1.65\)</span>’tir.</p>
@@ -239,7 +241,7 @@ Z = \frac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}}
 <span id="cb2-12"><a href="tests.html#cb2-12" aria-hidden="true" tabindex="-1"></a>           <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">size =</span> <span class="fl">0.95</span>, <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">type =</span> <span class="st">&quot;closed&quot;</span>, <span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.02</span>, <span class="st">&quot;npc&quot;</span>))) <span class="sc">+</span></span>
 <span id="cb2-13"><a href="tests.html#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x=</span><span class="fl">2.66</span>, <span class="at">y=</span><span class="fl">0.048</span>, <span class="at">label=</span><span class="st">&#39;0.05&#39;</span>)</span></code></pre></div>
 <p><img src="03-Tests_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>Test istatistiği, taralı alan olan kabul bölgesine düşmediği için <span class="math inline">\(H_{0}\)</span> boş hipotezini red edebilirsiniz.</p>
+<p>Test istatistiği, taralı alan olan kabul bölgesine düşmediği için <span class="math inline">\(H_{0}\)</span> boş hipotezini red edebilirsiniz. Yani, kutuları kozmetik ile aşırı doldurduğumuzdan makul bir şekilde şüphelenebiliriz.</p>
 </div>
 <div id="r-kodu" class="section level3" number="3.1.5">
 <h3><span class="header-section-number">3.1.5</span> R-kodu</h3>
@@ -251,7 +253,7 @@ Z = \frac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}}
 <span id="cb3-6"><a href="tests.html#cb3-6" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">&lt;-</span> (xbar <span class="sc">-</span> mu0) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span>
 <span id="cb3-7"><a href="tests.html#cb3-7" aria-hidden="true" tabindex="-1"></a>Z</span></code></pre></div>
 <pre><code>## [1] 1.8</code></pre>
-<p>İki yönlü hipotez testlerine ait p-değerini R kodu kullanarak da bulabiliriz. Yukarıdaki ilk grafiğe bakıldığında <span class="math inline">\(H_{0}\)</span> boş hipotezini red edebilmek için normalleştirilmiş x değerlerinin -1.8den küçük ve 1.8’den büyük olma olasılığı bulmamız gerekmektedir.</p>
+<p>İki yönlü hipotez testlerine ait p-değerini R kodu kullanarak da bulabiliriz. Yukarıdaki ilk grafiğe bakıldığında <span class="math inline">\(H_{0}\)</span> boş hipotezini red edebilmek için Z değerinin mutlak değerce 1.8’den büyük olma olasılığı bulmamız gerekmektedir.</p>
 <p><span class="math display">\[\begin{equation}
 \begin{split}
 P \left( |Z| \geq 1.8 \right) &amp;= P(Z \geq 1.8) + P(Z \leq -1.8) \\
@@ -262,7 +264,7 @@ P \left( |Z| \geq 1.8 \right) &amp;= P(Z \geq 1.8) + P(Z \leq -1.8) \\
 <p>Burada <span class="math inline">\(\phi\)</span> normal dağılımın birikimli (kümülatif) dağılım fonksiyonudur.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="tests.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="fl">1.8</span>, <span class="at">mean=</span><span class="dv">0</span>, <span class="at">sd=</span><span class="dv">1</span>) <span class="sc">+</span> <span class="fu">pnorm</span>(<span class="sc">-</span><span class="fl">1.8</span>, <span class="at">mean=</span><span class="dv">0</span>, <span class="at">sd=</span><span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] 0.07186064</code></pre>
-<p>O halde p-değeri 0.07186064’dir.bu p-değeri, belirlediğimiz anlamlılık düzeyi <span class="math inline">\(\alpha = 0.05\)</span>’ten büyük olduğu için <span class="math inline">\(H_{0}\)</span> boş hipotezini red edemezsiniz.</p>
+<p>O halde p-değeri 0.07186064’dir. Bu p-değeri, belirlediğimiz anlamlılık düzeyi <span class="math inline">\(\alpha = 0.05\)</span>’ten büyük olduğu için <span class="math inline">\(H_{0}\)</span> boş hipotezini red edemezsiniz.</p>
 </div>
 </div>
 <div id="test-2--" class="section level2" number="3.2">

@@ -28,6 +28,10 @@ bir veya iki yönlü ve $\alpha$ büyüklüğünde kritik bölgeye sahip standar
 
 ### Örnek
 
+Belirli bir kozmetik yelpazesi için, yüz pudrasının olduğu kutuları doldurmak için ortalama 4 gm ve standart sapma 1 gm olacak şekilde bir doldurma işlemi yapılmaktadır. Bir kalite kontrol müfettişi rastgele dokuz kutudan numune almaktadır ve her bir kutudaki tozu tartmaktadır. Ortalama toz ağırlığı 4,6 gramdır. Dolgu işlemi hakkında neler söylenebilir? 
+
+Aşırı ve az doldurma konusunda endişeliysek iki yönlü bir test kullanılabilir. Öte yandan, sadece kozmetik malzemenin fazla doldurulmasıyla ilgileniyorsak tek yönlü bir test uygundur.
+
 Sayısal Hesaplama
 
 $\mu_{0} = 4.0$, $n=9$, $\overline{x} = 4.6$, $\sigma = 1.0$, $\alpha = 0.05$ ($\%95$ güven düzeyine sahip)
@@ -61,9 +65,39 @@ ggplot(NULL, aes(c(-3,1))) +
   annotate("text", x=-2.66, y=0.048, label='0.025')
 ```
 
-<img src="03-Tests_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
+```
 
-Test istatistiği, taralı alan olan kabul bölgesine düstüğü için $H_{0}$ boş hipotezini red edemezsiniz.
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
+```
+
+![](03-Tests_files/figure-latex/unnamed-chunk-1-1.pdf)<!-- --> 
+
+Test istatistiği, taralı alan olan kabul bölgesine düstüğü için $H_{0}$ boş hipotezini red edemezsiniz. Yani, bu numune (örneklem) için doldurma işleminin hedefte çalışmadığını öne sürmek için hiçbir neden yoktur.
 
 Eğer tek yönlü hipotez testi kurmak isteseydiniz, kuracağınız hipotezler aşağıdaki gibidir:
 
@@ -88,9 +122,39 @@ ggplot(NULL, aes(c(-3,1))) +
   annotate("text", x=2.66, y=0.048, label='0.05')
 ```
 
-<img src="03-Tests_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
+```
 
-Test istatistiği, taralı alan olan kabul bölgesine düşmediği için $H_{0}$ boş hipotezini red edebilirsiniz.
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
+```
+
+```
+## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
+```
+
+```
+## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
+```
+
+![](03-Tests_files/figure-latex/unnamed-chunk-2-1.pdf)<!-- --> 
+
+Test istatistiği, taralı alan olan kabul bölgesine düşmediği için $H_{0}$ boş hipotezini red edebilirsiniz. Yani, kutuları kozmetik ile aşırı doldurduğumuzdan makul bir şekilde şüphelenebiliriz.
 
 ### R-kodu
 
@@ -109,7 +173,7 @@ Z
 ## [1] 1.8
 ```
 
-İki yönlü hipotez testlerine ait p-değerini R kodu kullanarak da bulabiliriz. Yukarıdaki ilk grafiğe bakıldığında  $H_{0}$ boş hipotezini red edebilmek için normalleştirilmiş x değerlerinin -1.8den küçük ve 1.8'den büyük olma olasılığı bulmamız gerekmektedir.
+İki yönlü hipotez testlerine ait p-değerini R kodu kullanarak da bulabiliriz. Yukarıdaki ilk grafiğe bakıldığında  $H_{0}$ boş hipotezini red edebilmek için Z değerinin mutlak değerce 1.8'den büyük olma olasılığı bulmamız gerekmektedir.
 
 \begin{equation}
 \begin{split}
@@ -130,7 +194,7 @@ Burada $\phi$ normal dağılımın birikimli (kümülatif) dağılım fonksiyonu
 ## [1] 0.07186064
 ```
 
-O halde p-değeri 0.07186064'dir.bu p-değeri, belirlediğimiz anlamlılık düzeyi $\alpha = 0.05$'ten büyük olduğu için $H_{0}$ boş hipotezini red edemezsiniz.
+O halde p-değeri 0.07186064'dir. Bu p-değeri, belirlediğimiz anlamlılık düzeyi $\alpha = 0.05$'ten büyük olduğu için $H_{0}$ boş hipotezini red edemezsiniz.
 
 ## Test 2 - 
 
