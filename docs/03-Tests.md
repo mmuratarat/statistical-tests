@@ -32,11 +32,12 @@ Numerical calculation
 
 $\mu_{0} = 4.0$, $n=9$, $\overline{x} = 4.6$, $\sigma = 1.0$
 
-$Z =  \frac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}} =  \frac{4.6 - 4.0}{1.0 / \sqrt{9}} = \frac{0.6}{1/3} = 1.8$
+$Z =  \dfrac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}} =  \frac{4.6 - 4.0}{1.0 / \sqrt{9}} = \frac{0.6}{1/3} = 1.8$
 
-$\text{Critical value } Z_{0.05} = 1.96$
+  $\text{Kritik Değer } Z_{0.05} = 1.96$
 
 $H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu \neq \mu_{0}$. ($H_{0}$ boş hipotezini red edemezsiniz.)
+
 $H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu > \mu_{0}$. ($H_{0}$ hipotezini red edebilirsiniz.)
 
 
