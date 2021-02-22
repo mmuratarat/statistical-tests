@@ -16,11 +16,11 @@ $\sigma$: standart sapma (kitle)
 
 $s$: standart sapma (örneklem)
 
-$\mu$: kitle ortalaması
+$\mu$: kitle (popülasyon) ortalaması
 
-$\bar{x}$: örneklem ortalaması
+$\overline{x}$: örneklem ortalaması
 
-$\rho$: kitle korelasyon katsayısı
+$\rho$: kitle (popülasyon) korelasyon katsayısı
 
 $r$: örneklem korelasyon katsayısı
 

@@ -1,6 +1,58 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Testler {#tests}
 
-## Test 1 - 
+## Test 1 - Bir popülasyon ortalaması için Z testi (bilinen varyans)
+
+### Amaç
+
+Popülasyon varyansı bilindiğinde bir varsayılan popülasyon ortalaması $\mu_{0}$ ve bir örneklem ortalaması $\overline{x}$ arasındaki anlamlığının araştırılması
+
+### Kısıtlar
+
+1.Popülasyon varyansı $\sigma^{2}$'nin bilinmesi gereklidir. ($\sigma^{2}$ bilinmiyorsa, bir popülasyon ortalaması için t testine bakınız.)
+2. Popülasyon normal dağılıyorsa, test doğrudur. Normal dağılmıyorsa, test yine de yaklaşık bir sonuç verecektir.
+
+### Yöntem
+
+Ortalaması $\mu_{0}$ ve bilinen varyansı $\sigma^{2}$ olan bir popülasyondan, $n$ büyüklüğünde rastgele bir örneklem alınır ve örneklem ortalaması $\overline{x}$ hesaplanır. Test istatistiği olan
+
+\begin{equation}
+Z = \frac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}}
+\end{equation}
+
+bir veya iki yönlü ve $\alpha$ büyüklüğünde kritik bölgeye sahip standart normal dağılımla karşılaştırılabilir.
+
+### Örnek
+
+Numerical calculation
+
+$\mu_{0} = 4.0$, $n=9$, $\overline{x} = 4.6$, $\sigma = 1.0$
+
+$Z =  \frac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}} =  \frac{4.6 - 4.0}{1.0 / \sqrt{9}} = \frac{0.6}{1/3} = 1.8$
+
+$\text{Critical value } Z_{0.05} = 1.96$
+
+$H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu \neq \mu_{0}$. ($H_{0}$ boş hipotezini red edemezsiniz.)
+$H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu > \mu_{0}$. ($H_{0}$ hipotezini red edebilirsiniz.)
+
+
+### R-kodu
+
+İki yö
+```{r, eval = TRUE, echo=TRUE, cache = TRUE}
+
+mu0 <- 4.0
+n <- 9
+xbar <- 4.6
+sigma <- 1.0
+
+Z <- (xbar - mu0) / (1 / sqrt(n))
+Z
+```
 
 ## Test 2 - 
 
