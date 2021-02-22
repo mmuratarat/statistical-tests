@@ -1,1 +1,1 @@
-# İstatistiksel Terimler
+# İstatistiksel Terimler {#statisticalterms}

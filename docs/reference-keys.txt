@@ -5,3 +5,11 @@ blaaaa
 technical-details
 istatistiksel-terimler
 testler
+giriş
+test-1--
+test-2--
+test-3--
+test-4--
+statistical_terms
+tests
+statisticalterms
