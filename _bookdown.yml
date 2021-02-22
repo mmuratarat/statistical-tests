@@ -1,5 +1,5 @@
 book_filename: "statistical_tests"
-chapter_name: "Chapter "
+chapter_name: "Bölüm "
 repo: https://github.com/mmuratarat/statistical-tests
 output_dir: docs
 rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Statistical_terms.Rmd", "03-Tests.Rmd"]

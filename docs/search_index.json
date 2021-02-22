@@ -1,1 +1,1 @@
-[["index.html", "İstatistiksel Testler Önsöz", " İstatistiksel Testler Mustafa Murat ARAT 2021-02-22 Önsöz This is the very first part of the book. bookdown::render_book(‘index.Rmd,’ ‘bookdown::pdf_book’) bookdown::render_book(‘index.Rmd,’ ‘bookdown::epub_book’) "]]
+[["introduction.html", "Bölüm 1 Giriş", " Bölüm 1 Giriş BLABLABLA "]]
