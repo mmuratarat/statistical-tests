@@ -72,7 +72,10 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Önsöz</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Giriş</a></li>
-<li class="chapter" data-level="2" data-path="statisticalterms.html"><a href="statisticalterms.html"><i class="fa fa-check"></i><b>2</b> İstatistiksel Terimler</a></li>
+<li class="chapter" data-level="2" data-path="statisticalterms.html"><a href="statisticalterms.html"><i class="fa fa-check"></i><b>2</b> İstatistiksel Terimler</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="statisticalterms.html"><a href="statisticalterms.html#kullanılan-semboller"><i class="fa fa-check"></i><b>2.1</b> Kullanılan Semboller</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="tests.html"><a href="tests.html"><i class="fa fa-check"></i><b>3</b> Testler</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="tests.html"><a href="tests.html#test-1--"><i class="fa fa-check"></i><b>3.1</b> Test 1 -</a></li>
@@ -102,7 +105,31 @@
             <section class="normal" id="section-">
 <div id="statisticalterms" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> İstatistiksel Terimler</h1>
+<div id="kullanılan-semboller" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Kullanılan Semboller</h2>
+<p><span class="math inline">\(n\)</span>: gözlem sayısı (örneklem büyüklüğü)
+<span class="math inline">\(K\)</span>: örneklem sayısı (her biri n elemana sahip)
+<span class="math inline">\(\alpha\)</span>: anlamlılık düzeyi
+<span class="math inline">\(\nu\)</span>: serbestlik derecesi
+<span class="math inline">\(\sigma\)</span>: standart sapma (kitle)
+<span class="math inline">\(s\)</span>: standart sapma (örneklem)
+<span class="math display">\[: kitle ortalaması
+\]</span>: örneklem ortalaması
+<span class="math inline">\(\rho\)</span>: kitle korelasyon katsayısı
+<span class="math inline">\(r\)</span>: örneklem korelasyon katsayısı
+<span class="math inline">\(Z\)</span>: standart normal sapma</p>
 
+<table>
+<tbody>
+<tr class="odd">
+<td>header-includes:</td>
+</tr>
+<tr class="even">
+<td>- </td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
             </section>
 
@@ -167,6 +194,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

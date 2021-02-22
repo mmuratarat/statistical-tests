@@ -1,1 +1,17 @@
 # İstatistiksel Terimler {#statisticalterms}
+
+
+
+## Kullanılan Semboller
+
+$n$: gözlem sayısı (örneklem büyüklüğü)
+$K$: örneklem sayısı (her biri n elemana sahip)
+$\alpha$: anlamlılık düzeyi
+$\nu$: serbestlik derecesi
+$\sigma$: standart sapma (kitle)
+$s$: standart sapma (örneklem)
+$$: kitle ortalaması
+$$: örneklem ortalaması
+$\rho$: kitle korelasyon katsayısı
+$r$: örneklem korelasyon katsayısı
+$Z$: standart normal sapma

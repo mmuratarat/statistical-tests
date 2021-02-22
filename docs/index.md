@@ -13,6 +13,8 @@ bibliography: book.bib
 site: bookdown::bookdown_site
 biblio-style: apalike
 url: https://mmuratarat.github.io/statistical-tests/
+header-includes:
+  - \AtBeginDocument{\renewcommand{\chaptername}{Módulo}}
 ---
 
 # Önsöz {-}
