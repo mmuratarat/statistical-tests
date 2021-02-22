@@ -15,7 +15,7 @@ biblio-style: apalike
 url: https://mmuratarat.github.io/statistical-tests/
 ---
 
-# Önsöz {#preface}
+# Önsöz {-}
 
 This is the very first part of the book.
 
