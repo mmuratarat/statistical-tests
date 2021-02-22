@@ -3,3 +3,5 @@ diving-in
 bla
 blaaaa
 technical-details
+istatistiksel-terimler
+testler

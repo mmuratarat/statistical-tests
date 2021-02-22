@@ -1,1 +1,1 @@
-[["technical-details.html", "Chapter 3 Technical Details", " Chapter 3 Technical Details Now I’ll teach you some crazy math, but I need to work it out first… "]]
+[["index.html", "İstatistiksel Testler Preface", " İstatistiksel Testler Mustafa Murat ARAT 2021-02-22 Preface This is the very first part of the book. bookdown::render_book(‘index.Rmd,’ ‘bookdown::pdf_book’) bookdown::render_book(‘index.Rmd,’ ‘bookdown::epub_book’) "]]
