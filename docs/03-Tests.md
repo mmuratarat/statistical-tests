@@ -30,7 +30,7 @@ bir veya iki yönlü ve $\alpha$ büyüklüğünde kritik bölgeye sahip standar
 
 Sayısal Hesaplama
 
-$\mu_{0} = 4.0$, $n=9$, $\overline{x} = 4.6$, $\sigma = 1.0$, $\alpha = 0.05$
+$\mu_{0} = 4.0$, $n=9$, $\overline{x} = 4.6$, $\sigma = 1.0$, $\alpha = 0.05$ ($\%95$ güven düzeyine sahip)
 
 $Z =  \dfrac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}} =  \frac{4.6 - 4.0}{1.0 / \sqrt{9}} = \frac{0.6}{1/3} = 1.8$
 
@@ -94,7 +94,6 @@ Test istatistiği, taralı alan olan kabul bölgesine düşmediği için $H_{0}$
 
 ### R-kodu
 
-İki yö
 
 ```r
 mu0 <- 4.0
@@ -109,6 +108,29 @@ Z
 ```
 ## [1] 1.8
 ```
+
+İki yönlü hipotez testlerine ait p-değerini R kodu kullanarak da bulabiliriz. Yukarıdaki ilk grafiğe bakıldığında  $H_{0}$ boş hipotezini red edebilmek için normalleştirilmiş x değerlerinin -1.8den küçük ve 1.8'den büyük olma olasılığı bulmamız gerekmektedir.
+
+\begin{equation}
+\begin{split}
+P \left( |Z| \geq 1.8 \right) &= P(Z \geq 1.8) + P(Z \leq -1.8) \\
+&= 1 - P(Z \leq 1.8) + P(Z \leq -1.8) \\
+&= 1 - \phi(1.8) +\phi(-1.8)\\
+\end{split}
+\end{equation}
+
+Burada $\phi$ normal dağılımın birikimli (kümülatif) dağılım fonksiyonudur.
+
+
+```r
+1 - pnorm(1.8, mean=0, sd=1) + pnorm(-1.8, mean=0, sd=1)
+```
+
+```
+## [1] 0.07186064
+```
+
+O halde p-değeri 0.07186064'dir.bu p-değeri, belirlediğimiz anlamlılık düzeyi $\alpha = 0.05$'ten büyük olduğu için $H_{0}$ boş hipotezini red edemezsiniz.
 
 ## Test 2 - 
 
