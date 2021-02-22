@@ -5,6 +5,11 @@ output:
 ---
 # Testler {#tests}
 
+```{r, echo = F}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=80),tidy=TRUE)
+```
+
 ## Test 1 - Bir popülasyon ortalaması için Z testi (bilinen varyans)
 
 ### Amaç

@@ -5,6 +5,8 @@ output:
 ---
 # Testler {#tests}
 
+
+
 ## Test 1 - Bir popülasyon ortalaması için Z testi (bilinen varyans)
 
 ### Amaç
@@ -47,25 +49,21 @@ Bu durumda kabul bölgesi $−1.96 < Z < 1.96$'dır çünkü kritik değer $Z_{\
 
 ```r
 library(ggplot2)
-ggplot(NULL, aes(c(-3,1))) +
-  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(-3, -1.96)) +
-  geom_area(stat = "function", fun = dnorm, fill = "#FAD623", xlim = c(-1.96, 1.96)) +
-  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(1.96, 3)) +
-  geom_vline(xintercept = 0, color = "#6C0606", linetype = "dotted") +
-  geom_vline(xintercept = 1.8, color = "#000000", lwd=1, linetype = "dashed") +
-  labs(x = "z", y = "") +
-  scale_y_continuous(breaks = NULL) +
-  scale_x_continuous(breaks = c(-1.96, 0, 1.96))+
-  annotate("label", x = 0, y = 0.2, label = "KABUL BÖLGESİ")+
-  annotate("segment", x = 2.3, xend = 2.65, y = 0.015, yend =0.04,
-           colour = "black", size = 0.95, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=2.66, y=0.048, label='0.025')+
-  annotate("segment", x = -2.3, xend = -2.65, y = 0.015, yend =0.04,
-           colour = "black", size = 0.95, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=-2.66, y=0.048, label='0.025')
+ggplot(NULL, aes(c(-3, 1))) + geom_area(stat = "function", fun = dnorm, fill = "grey80", 
+    xlim = c(-3, -1.96)) + geom_area(stat = "function", fun = dnorm, fill = "#FAD623", 
+    xlim = c(-1.96, 1.96)) + geom_area(stat = "function", fun = dnorm, fill = "grey80", 
+    xlim = c(1.96, 3)) + geom_vline(xintercept = 0, color = "#6C0606", linetype = "dotted") + 
+    geom_vline(xintercept = 1.8, color = "#000000", lwd = 1, linetype = "dashed") + 
+    labs(x = "z", y = "") + scale_y_continuous(breaks = NULL) + scale_x_continuous(breaks = c(-1.96, 
+    0, 1.96)) + annotate("label", x = 0, y = 0.2, label = "KABUL BÖLGESİ") + annotate("segment", 
+    x = 2.3, xend = 2.65, y = 0.015, yend = 0.04, colour = "black", size = 0.95, 
+    arrow = arrow(type = "closed", length = unit(0.02, "npc"))) + annotate("text", 
+    x = 2.66, y = 0.048, label = "0.025") + annotate("segment", x = -2.3, xend = -2.65, 
+    y = 0.015, yend = 0.04, colour = "black", size = 0.95, arrow = arrow(type = "closed", 
+        length = unit(0.02, "npc"))) + annotate("text", x = -2.66, y = 0.048, label = "0.025")
 ```
 
-![](03-Tests_files/figure-latex/unnamed-chunk-1-1.pdf)<!-- --> 
+![](03-Tests_files/figure-latex/unnamed-chunk-2-1.pdf)<!-- --> 
 
 Test istatistiği, taralı alan olan kabul bölgesine düstüğü için $H_{0}$ boş hipotezini red edemezsiniz. Yani, bu numune (örneklem) için doldurma işleminin hedefte çalışmadığını öne sürmek için hiçbir neden yoktur.
 
@@ -78,21 +76,18 @@ Bu durumda kabul bölgesi $Z < 1.65$'dır çünkü kritik değer $Z_{\alpha} = Z
 
 ```r
 library(ggplot2)
-ggplot(NULL, aes(c(-3,1))) +
-  geom_area(stat = "function", fun = dnorm, fill = "#AB1616", xlim = c(-3, 1.65)) +
-  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(1.65, 3)) +
-  geom_vline(xintercept = 0, color = "#6C0606", linetype = "dotted") +
-  geom_vline(xintercept = 1.8, color = "#000000", lwd=1, linetype = "dashed") +
-  labs(x = "z", y = "") +
-  scale_y_continuous(breaks = NULL) +
-  scale_x_continuous(breaks = c(-1.65, 0, 1.65))+
-  annotate("label", x = 0, y = 0.2, label = "KABUL BÖLGESİ")+
-  annotate("segment", x = 2.3, xend = 2.65, y = 0.015, yend =0.04,
-           colour = "black", size = 0.95, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=2.66, y=0.048, label='0.05')
+ggplot(NULL, aes(c(-3, 1))) + geom_area(stat = "function", fun = dnorm, fill = "#AB1616", 
+    xlim = c(-3, 1.65)) + geom_area(stat = "function", fun = dnorm, fill = "grey80", 
+    xlim = c(1.65, 3)) + geom_vline(xintercept = 0, color = "#6C0606", linetype = "dotted") + 
+    geom_vline(xintercept = 1.8, color = "#000000", lwd = 1, linetype = "dashed") + 
+    labs(x = "z", y = "") + scale_y_continuous(breaks = NULL) + scale_x_continuous(breaks = c(-1.65, 
+    0, 1.65)) + annotate("label", x = 0, y = 0.2, label = "KABUL BÖLGESİ") + annotate("segment", 
+    x = 2.3, xend = 2.65, y = 0.015, yend = 0.04, colour = "black", size = 0.95, 
+    arrow = arrow(type = "closed", length = unit(0.02, "npc"))) + annotate("text", 
+    x = 2.66, y = 0.048, label = "0.05")
 ```
 
-![](03-Tests_files/figure-latex/unnamed-chunk-2-1.pdf)<!-- --> 
+![](03-Tests_files/figure-latex/unnamed-chunk-3-1.pdf)<!-- --> 
 
 Test istatistiği, taralı alan olan kabul bölgesine düşmediği için $H_{0}$ boş hipotezini red edebilirsiniz. Yani, kutuları kozmetik ile aşırı doldurduğumuzdan makul bir şekilde şüphelenebiliriz.
 
@@ -100,12 +95,12 @@ Test istatistiği, taralı alan olan kabul bölgesine düşmediği için $H_{0}$
 
 
 ```r
-mu0 <- 4.0
+mu0 <- 4
 n <- 9
 xbar <- 4.6
-sigma <- 1.0
+sigma <- 1
 
-Z <- (xbar - mu0) / (1 / sqrt(n))
+Z <- (xbar - mu0)/(1/sqrt(n))
 Z
 ```
 
@@ -127,7 +122,7 @@ Burada $\phi$ normal dağılımın birikimli (kümülatif) dağılım fonksiyonu
 
 
 ```r
-1 - pnorm(1.8, mean=0, sd=1) + pnorm(-1.8, mean=0, sd=1)
+1 - pnorm(1.8, mean = 0, sd = 1) + pnorm(-1.8, mean = 0, sd = 1)
 ```
 
 ```

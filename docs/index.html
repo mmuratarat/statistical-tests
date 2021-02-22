@@ -118,7 +118,7 @@
 <div id="önsöz" class="section level1 unnumbered">
 <h1>Önsöz</h1>
 <p>This is the very first part of the book.</p>
-<p>bookdown::render_book(‘index.Rmd,’ ‘bookdown::pdf_book’)
+<p>bookdown::render_book(‘index.Rmd,’ ‘bookdown::pdf_book,’ runtime = “static,” output_options = list(dev = “cairo_pdf”))
 bookdown::render_book(‘index.Rmd,’ ‘bookdown::epub_book’)</p>
 
 </div>

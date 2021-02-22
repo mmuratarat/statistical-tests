@@ -22,5 +22,5 @@ url: https://mmuratarat.github.io/statistical-tests/
 
 This is the very first part of the book.
 
-bookdown::render_book('index.Rmd', 'bookdown::pdf_book')
+bookdown::render_book('index.Rmd', 'bookdown::pdf_book', runtime = "static", output_options = list(dev = "cairo_pdf"))
 bookdown::render_book('index.Rmd', 'bookdown::epub_book')
