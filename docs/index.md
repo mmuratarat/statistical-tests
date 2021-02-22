@@ -2,6 +2,7 @@
 title: "İstatistiksel Testler"
 author: "Mustafa Murat ARAT"
 date: "2021-02-22"
+output: pdf_document
 description: Everything you need (and nothing more) about statistical tests
 documentclass: book
 fontsize: 12pt
