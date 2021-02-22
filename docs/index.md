@@ -1,20 +1,21 @@
 --- 
 title: "İstatistiksel Testler"
 author: "Mustafa Murat ARAT"
-date: "2021-02-22"
-output: pdf_document
+date: '2021-02-22'
+output:
+  html_document:
+    df_print: paged
 description: Everything you need (and nothing more) about statistical tests
 documentclass: book
 fontsize: 12pt
 github-repo: mmuratarat/statistical-tests
+header-includes: \AtBeginDocument{\renewcommand{\chaptername}{Bölüm}}
 linestretch: 1.5
 link-citations: yes
 bibliography: book.bib
 site: bookdown::bookdown_site
 biblio-style: apalike
 url: https://mmuratarat.github.io/statistical-tests/
-header-includes:
-  - \AtBeginDocument{\renewcommand{\chaptername}{Módulo}}
 ---
 
 # Önsöz {-}
