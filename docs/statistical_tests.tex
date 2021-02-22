@@ -207,7 +207,7 @@ Belirli bir kozmetik yelpazesi için, yüz pudrasının olduğu kutuları doldur
 
 Aşırı ve az doldurma konusunda endişeliysek iki yönlü bir test kullanılabilir. Öte yandan, sadece kozmetik malzemenin fazla doldurulmasıyla ilgileniyorsak tek yönlü bir test uygundur.
 
-Sayısal Hesaplama
+\textbf{Sayısal Hesaplama}
 
 \(\mu_{0} = 4.0\), \(n=9\), \(\overline{x} = 4.6\), \(\sigma = 1.0\), \(\alpha = 0.05\) (\(\%95\) güven düzeyine sahip)
 
@@ -291,7 +291,7 @@ Bu durumda kabul bölgesi \(Z < 1.65\)'dır çünkü kritik değer \(Z_{\alpha} 
   \FunctionTok{geom\_vline}\NormalTok{(}\AttributeTok{xintercept =} \FloatTok{1.8}\NormalTok{, }\AttributeTok{color =} \StringTok{"\#000000"}\NormalTok{, }\AttributeTok{lwd=}\DecValTok{1}\NormalTok{, }\AttributeTok{linetype =} \StringTok{"dashed"}\NormalTok{) }\SpecialCharTok{+}
   \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"z"}\NormalTok{, }\AttributeTok{y =} \StringTok{""}\NormalTok{) }\SpecialCharTok{+}
   \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{breaks =} \ConstantTok{NULL}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\FloatTok{1.96}\NormalTok{, }\DecValTok{0}\NormalTok{, }\FloatTok{1.96}\NormalTok{))}\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\FloatTok{1.65}\NormalTok{, }\DecValTok{0}\NormalTok{, }\FloatTok{1.65}\NormalTok{))}\SpecialCharTok{+}
   \FunctionTok{annotate}\NormalTok{(}\StringTok{"label"}\NormalTok{, }\AttributeTok{x =} \DecValTok{0}\NormalTok{, }\AttributeTok{y =} \FloatTok{0.2}\NormalTok{, }\AttributeTok{label =} \StringTok{"KABUL BÖLGESİ"}\NormalTok{)}\SpecialCharTok{+}
   \FunctionTok{annotate}\NormalTok{(}\StringTok{"segment"}\NormalTok{, }\AttributeTok{x =} \FloatTok{2.3}\NormalTok{, }\AttributeTok{xend =} \FloatTok{2.65}\NormalTok{, }\AttributeTok{y =} \FloatTok{0.015}\NormalTok{, }\AttributeTok{yend =}\FloatTok{0.04}\NormalTok{,}
            \AttributeTok{colour =} \StringTok{"black"}\NormalTok{, }\AttributeTok{size =} \FloatTok{0.95}\NormalTok{, }\AttributeTok{arrow =} \FunctionTok{arrow}\NormalTok{(}\AttributeTok{type =} \StringTok{"closed"}\NormalTok{, }\AttributeTok{length =} \FunctionTok{unit}\NormalTok{(}\FloatTok{0.02}\NormalTok{, }\StringTok{"npc"}\NormalTok{))) }\SpecialCharTok{+}

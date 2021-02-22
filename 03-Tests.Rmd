@@ -32,7 +32,7 @@ Belirli bir kozmetik yelpazesi için, yüz pudrasının olduğu kutuları doldur
 
 Aşırı ve az doldurma konusunda endişeliysek iki yönlü bir test kullanılabilir. Öte yandan, sadece kozmetik malzemenin fazla doldurulmasıyla ilgileniyorsak tek yönlü bir test uygundur.
 
-Sayısal Hesaplama
+**Sayısal Hesaplama**
 
 $\mu_{0} = 4.0$, $n=9$, $\overline{x} = 4.6$, $\sigma = 1.0$, $\alpha = 0.05$ ($\%95$ güven düzeyine sahip)
 
@@ -81,7 +81,7 @@ ggplot(NULL, aes(c(-3,1))) +
   geom_vline(xintercept = 1.8, color = "#000000", lwd=1, linetype = "dashed") +
   labs(x = "z", y = "") +
   scale_y_continuous(breaks = NULL) +
-  scale_x_continuous(breaks = c(-1.96, 0, 1.96))+
+  scale_x_continuous(breaks = c(-1.65, 0, 1.65))+
   annotate("label", x = 0, y = 0.2, label = "KABUL BÖLGESİ")+
   annotate("segment", x = 2.3, xend = 2.65, y = 0.015, yend =0.04,
            colour = "black", size = 0.95, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
