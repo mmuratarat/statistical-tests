@@ -65,36 +65,6 @@ ggplot(NULL, aes(c(-3,1))) +
   annotate("text", x=-2.66, y=0.048, label='0.025')
 ```
 
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
-```
-
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
-```
-
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
-```
-
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
-```
-
-```
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
-```
-
-```
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
-```
-
 ![](03-Tests_files/figure-latex/unnamed-chunk-1-1.pdf)<!-- --> 
 
 Test istatistiği, taralı alan olan kabul bölgesine düstüğü için $H_{0}$ boş hipotezini red edemezsiniz. Yani, bu numune (örneklem) için doldurma işleminin hedefte çalışmadığını öne sürmek için hiçbir neden yoktur.
@@ -120,36 +90,6 @@ ggplot(NULL, aes(c(-3,1))) +
   annotate("segment", x = 2.3, xend = 2.65, y = 0.015, yend =0.04,
            colour = "black", size = 0.95, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
   annotate("text", x=2.66, y=0.048, label='0.05')
-```
-
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
-```
-
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
-```
-
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
-```
-
-```
-## Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
-```
-
-```
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <c4>
-```
-
-```
-## Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-## conversion failure on 'KABUL BÖLGESİ' in 'mbcsToSbcs': dot substituted for <b0>
 ```
 
 ![](03-Tests_files/figure-latex/unnamed-chunk-2-1.pdf)<!-- --> 
