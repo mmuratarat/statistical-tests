@@ -28,18 +28,63 @@ bir veya iki yönlü ve $\alpha$ büyüklüğünde kritik bölgeye sahip standar
 
 ### Örnek
 
-Numerical calculation
+Sayısal Hesaplama
 
-$\mu_{0} = 4.0$, $n=9$, $\overline{x} = 4.6$, $\sigma = 1.0$
+$\mu_{0} = 4.0$, $n=9$, $\overline{x} = 4.6$, $\sigma = 1.0$, $\alpha = 0.05$
 
 $Z =  \dfrac{\overline{x} - \mu_{0}}{\sigma / \sqrt{n}} =  \frac{4.6 - 4.0}{1.0 / \sqrt{9}} = \frac{0.6}{1/3} = 1.8$
 
-  $\text{Kritik Değer } Z_{0.05} = 1.96$
+Eğer iki yönlü hipotez testi kullanmak isterseniz, kurmanız gereken hipotezler aşağıdaki gibidir:
 
-$H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu \neq \mu_{0}$. ($H_{0}$ boş hipotezini red edemezsiniz.)
+$H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu \neq \mu_{0}$. 
 
-$H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu > \mu_{0}$. ($H_{0}$ hipotezini red edebilirsiniz.)
+Bu durumda kabul bölgesi $−1.96 < Z < 1.96$'dır çünkü kritik değer $Z_{\alpha/2} = Z_{0.025} = 1.96$.
 
+```{r, eval = TRUE, echo=TRUE, cache = TRUE}
+library(ggplot2)
+ggplot(NULL, aes(c(-3,1))) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(-3, -1.96)) +
+  geom_area(stat = "function", fun = dnorm, fill = "#FAD623", xlim = c(-1.96, 1.96)) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(1.96, 3)) +
+  geom_vline(xintercept = 0, color = "#6C0606", linetype = "dotted") +
+  geom_vline(xintercept = 1.8, color = "#000000", lwd=1, linetype = "dashed") +
+  labs(x = "z", y = "") +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks = c(-1.96, 0, 1.96))+
+  annotate("label", x = 0, y = 0.2, label = "KABUL BÖLGESİ")+
+  annotate("segment", x = 2.3, xend = 2.65, y = 0.015, yend =0.04,
+           colour = "black", size = 0.95, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
+  annotate("text", x=2.66, y=0.048, label='0.025')+
+  annotate("segment", x = -2.3, xend = -2.65, y = 0.015, yend =0.04,
+           colour = "black", size = 0.95, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
+  annotate("text", x=-2.66, y=0.048, label='0.025')
+```
+
+Test istatistiği, taralı alan olan kabul bölgesine düstüğü için $H_{0}$ boş hipotezini red edemezsiniz.
+
+Eğer tek yönlü hipotez testi kurmak isteseydiniz, kuracağınız hipotezler aşağıdaki gibidir:
+
+$H_{0}: \mu = \mu_{0},\,\,\, H_{1}: \mu > \mu_{0}$.
+
+Bu durumda kabul bölgesi $Z < 1.65$'dır çünkü kritik değer $Z_{\alpha} = Z_{0.05} = 1.65$'tir.
+
+```{r, eval = TRUE, echo=TRUE, cache = TRUE}
+library(ggplot2)
+ggplot(NULL, aes(c(-3,1))) +
+  geom_area(stat = "function", fun = dnorm, fill = "#AB1616", xlim = c(-3, 1.65)) +
+  geom_area(stat = "function", fun = dnorm, fill = "grey80", xlim = c(1.65, 3)) +
+  geom_vline(xintercept = 0, color = "#6C0606", linetype = "dotted") +
+  geom_vline(xintercept = 1.8, color = "#000000", lwd=1, linetype = "dashed") +
+  labs(x = "z", y = "") +
+  scale_y_continuous(breaks = NULL) +
+  scale_x_continuous(breaks = c(-1.96, 0, 1.96))+
+  annotate("label", x = 0, y = 0.2, label = "KABUL BÖLGESİ")+
+  annotate("segment", x = 2.3, xend = 2.65, y = 0.015, yend =0.04,
+           colour = "black", size = 0.95, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
+  annotate("text", x=2.66, y=0.048, label='0.05')
+```
+
+Test istatistiği, taralı alan olan kabul bölgesine düşmediği için $H_{0}$ boş hipotezini red edebilirsiniz.
 
 ### R-kodu
 
